@@ -1,13 +1,13 @@
-const user = {
-  name: "Joe",
-  age: "26",
-};
+const showText = () => `Hola Mundo`;
+const showNumber = () => 22;
+const showBool = () => true;
+const showArr = () => [1, 2, 3];
 
-function printInfo(user) {
-  const { name, age } = user;
-  return `<h1>Hola ${name}</h1>`;
-}
+const button = document.createElement("button");
+button.innerText = `Click me`;
 
-console.log(printInfo(user));
+button.addEventListener("click", () => {
+  alert(`Clicked`);
+});
 
-document.body.innerHTML = printInfo(user);
+document.body.append(button);
